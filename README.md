@@ -198,7 +198,7 @@ The report cannot exceed 20 pages, including the list of references. The page fo
 
 * Project report - `25%`
 
-* **BONUS**  `10%` 
+* **BONUS**  `5%` 
     * Rather than using artifical testcases, use tc-netem to emulate packet loss, reordering and duplicate packets to show the efficacy of your code. Add the results in your discussion section.
 
 * **BONUS** `5%` 
