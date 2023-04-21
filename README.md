@@ -129,7 +129,7 @@ See textbook and lecture slides for more details.
 
 1. Run the file transfer application with stop_and_wait reliable protocol, GBN with window sizes 5, 10, 15, and GBN-SR with window sizes 5, 10, 15  using RTTs 25, 50 and 100ms. Calculate throughput values for all these cases and explain your results. 
 2. Write a test case to skip an ack - this will trigger retransmission. Test with all three reliable functions. 
-3. Write a test case to skip a sequence number to trigger an old ack from the receiver, indicating a packet loss. This will also trigger retransmission. Test with GBN, and SR. Report your results.
+3. Write a test case to skip a sequence number to show the out-of-order delivery effect. This will also trigger retransmission. Test with GBN, and SR. Report your results.
 4. Use your artificial testcases to show the efficacy of your solution.
 
 ## Submission
