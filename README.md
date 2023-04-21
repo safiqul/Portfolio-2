@@ -138,7 +138,7 @@ You must submit **yourgroup_studentid_portfolio1.zip**  through the Inspera exam
 
 Your zip file should contain:
 
-1. Source code of DRTP
+1. Source code of final transfer application (application.py) and DRTP
     * where the code is well commented. Document all the variables and definitions. For each function in the program, you must document the following:
         * what are the arguments.
         * What the function does.
