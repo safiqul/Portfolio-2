@@ -115,7 +115,7 @@ When the transfer is finished the sender sends a FIN packet. The receiver sends 
 
 You will implement the following three reliability functions and users will be able to choose them from the command line argument (using -r):
 
-1. A stop and wait protocol (stop_and_wait()): The sender sends a packet, then waits for an ack confirming that packet. If an ack is arrived, it sends a new packet. If an ack does not arrive, it waits for timeout (fixed value: 500ms, use socket.settimeout) and then resends the packet. If sender receives a NAK, it resends the packet. 
+1. A stop and wait protocol (stop_and_wait()): The sender sends a packet, then waits for an ack confirming that packet. If an ack is arrived, it sends a new packet. If an ack does not arrive, it waits for timeout (fixed value: 500ms, use socket.settimeout) and then resends the packet. If sender receives a duplicate ACK (ack of the last received sequence), it resends the packet. 
 
 2. Go-Back-N (GBN()): sender implements the Go-Back-N strategy using a fixed window size of 5 packets to transfer data. The sequence numbers represent packets, i.e. packet 1 is numbered 1, packet 2 is numbered 2 and so on. If no ACK packet is received within a given timeout (choose a default value: 500ms, use socket.settimeout() function), all packets that have not previously been acknowledged are assumed to be lost and they are retransmitted. A receiver passes on data in order and if packets arrive at the receiver in the wrong order, this indicates packet loss or reordering in the network. The DRTP receiver should in such cases not acknowledge anyting and may discard these packets.
 
@@ -134,7 +134,7 @@ See textbook and lecture slides for more details.
 
 ## Submission
 
-You must submit **yourgroup_studentid_portfolio1.zip**  through the Inspera exam system. You will get access to inspera before the deadline. You must add your group members on the Inspera system.
+You must submit **yourgroup_studentids_portfolio2.zip**  through the Inspera exam system. You will get access to inspera before the deadline. You must add your group members on the Inspera system.
 
 Your zip file should contain:
 
