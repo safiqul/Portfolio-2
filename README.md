@@ -180,7 +180,7 @@ Example final structure of your folder:
 
 ### Project report
 
-You also need to submit a project report in the pdf format. **NOTE**: I won't accept word or any other format. The report must have  a title page (your name, ID and the title of your work), table of contents, and the following sections:
+You also need to submit a project report in the pdf format. **NOTE**: I won't accept word or any other format. The report must have  a title page (your names, IDs and the title of your work), table of contents, and the following sections:
 
 1. Introduction
 3. Background
