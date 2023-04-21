@@ -161,7 +161,7 @@ Here is an example:
 ```
 2. A report with your names, IDs and title. Your document must be submitted in the pdf format. 
     * read the instructions (see below)
-4. A README file: info on how to run simpleperf and tests to generate data
+4. A README file: info on how to run application.py with the flags
 
 
 
