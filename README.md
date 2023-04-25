@@ -51,7 +51,7 @@ The sender can be invoked with:
 
 `python3 application.py -c  -f Photo.jpg -r gbn`
 
-If I want to test duplicate/reordering/packet_loss scenario:
+If I want to test packet_loss scenario:
 
 `python3 application.py -c  -f Photo.jpg -r gbn -t loss`
 
