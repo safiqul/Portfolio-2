@@ -33,12 +33,12 @@ A simple file transfer server will receive a file from a client through its DRTP
 
 The server/receiver can be invoked with:
 
-`python3 application.py -s -f Photo.jpg -m gbn`
+`python3 application.py -s -f Photo-recv.jpg -r gbn`
 
 
 If I want to skip an ack to trigger retransmission at the sender-side:
 
-`python3 application.py -s -f Photo.jpg -m gbn -t skipack`
+`python3 application.py -s -f Photo-recv.jpg -r gbn -t skipack`
 
 
 ### A simple file transfer client
