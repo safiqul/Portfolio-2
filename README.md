@@ -29,17 +29,18 @@ and -s to invoke a server.
 
 ### A simple file transfer server
 
-A simple file transfer server will receive a file from a client through its DRTP/UDP socket and write it to the file system. The file name and the port numbers on which the server listens are given as command line arguments. NOTE: the port number of the server must also be the port number used by the client.
+A simple file transfer server will receive a file (e.g. safi.jpg) from a client through its DRTP/UDP socket and write it to the file system (e.g., safi-recv.jpg ). The IP address, the port number on which the server listens and the reliablity function are given as arguments. NOTE: the port number of the server must also be the port number that the client will use to connect.
 
 The server/receiver can be invoked with:
 
-`python3 application.py -s -f Photo-recv.jpg -r gbn`
+`python3 application.py -s -i <ip_address> -p <port_number> -r <reliable method>`
 
 
 If I want to skip an ack to trigger retransmission at the sender-side:
 
-`python3 application.py -s -f Photo-recv.jpg -r gbn -t skipack`
+`python3 application.py -s -i <ip_address> -p <port_number> -r <reliable method> -t <test_case>`
 
+e.g., test_case = skip_ack, reliable method=gbn
 
 ### A simple file transfer client
 
@@ -49,11 +50,15 @@ It is possible to transfer two source files at the same time. For simplicty, we'
 
 The sender can be invoked with:
 
-`python3 application.py -c  -f Photo.jpg -r gbn`
+`python3 application.py -c -i <server_ip_address> <server_portt> -f <file_to_transfer.jpg> -r <reliable method>`
 
 If I want to test packet_loss scenario:
 
-`python3 application.py -c  -f Photo.jpg -r gbn -t loss`
+`python3 application.py -c -i <server_ip_address> <server_portt> -f <file_to_transfer.jpg> -r <reliable method> -t <test_case>`
+
+e.g., test_case = `loss`
+
+> **NOTE** Both server and client ***MUST*** use the same reliable_method. 
 
 # Details
 
